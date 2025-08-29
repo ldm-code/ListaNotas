@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+          <meta charset="UTF-8">
+
+          <title>lista contatos</title>
+</head>
+<body>
+          <div style="text-align: center;">
+                 <form action="/lista" method="GET"></form>
+                    <h1>Seus contatos:</h1>
+                    <ul>
+
+                              {% for aluno in alunos %}
+                                  <li>NOME DO ALUNO: {{ aluno.nome }}, NOTA DO ALUNO: {{ aluno.nota }}</li>
+                              {% endfor %}
+                    </ul>
+                    
+
+
+          </div>          
+</body>
+</html>
