@@ -1,18 +1,18 @@
 ## ListaNotas
 
-- Uma aplicação desenvolvida para praticar a utilização do SQLAlchemy em conjunto com o Flask, visando a interação com bancos de dados relacionais e a exibição de notas de alunos.
+- Uma aplicação desenvolvida para praticar o uso do SQLAlchemy em aplicacoes com o Flask, visando a interação com bancos de dados relacionais e a exibição de notas de alunos.
 ---
 ## Tecnologias Utilizadas:
 
-- Python: Linguagem de programação utilizada no desenvolvimento da aplicação.
+- Python
 
-- Flask: Microframework para construção de aplicações web.
+- Flask
+- 
+- SQLAlchemy
 
-- SQLAlchemy: ORM (Object Relational Mapper) para facilitar a interação com o banco de dados.
+- HTML
 
-- HTML: Linguagem de marcação para construção das páginas web.
-
-- MySQL: Sistema de gerenciamento de banco de dados relacional utilizado.
+- MySQL:
 ---
 ## Funcionalidades:
 
