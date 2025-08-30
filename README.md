@@ -5,13 +5,9 @@
 ## Tecnologias Utilizadas:
 
 - Python
-
 - Flask
-- 
 - SQLAlchemy
-
 - HTML
-
 - MySQL:
 ---
 ## Funcionalidades:
@@ -26,7 +22,7 @@
 ---
 ## Aviso de Segurança:
 
-- Por questões de segurança, a senha do banco de dados presente neste repositório não é a minha senha real. Ela foi configurada de forma genérica para fins de demonstração e aprendizado. Recomenda-se que, ao utilizar este projeto, você substitua a senha pelo valor correspondente ao seu ambiente de desenvolvimento, garantindo a segurança de suas credenciais.
+- Por questões de segurança, a senha do banco de dados presente neste repositório não é a minha senha real. Ela foi configurada de forma genérica para fins de demonstração e aprendizado.  ao utilizar este projeto, você altera a senha(a variavel 'SUA_SENHA_DO_BANCO') pelo valor correspondente ao seu ambiente de desenvolvimento, garantindo a segurança de suas credenciais.
 ---
 ## Estrutura do Projeto:
 
