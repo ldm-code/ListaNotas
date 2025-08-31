@@ -1,6 +1,6 @@
 ## ListaNotas
 
-- Uma aplicação desenvolvida para praticar o uso do SQLAlchemy em aplicacoes com o Flask, visando a interação com bancos de dados relacionais e a exibição de notas de alunos.
+- Uma aplicação desenvolvida para praticar o uso do SQLAlchemy em aplicacoes com o Flask, visando a interação com bancos de dados relacionais (MySql),e a exibição de notas de alunos.
 ---
 ## Tecnologias Utilizadas:
 
