@@ -30,8 +30,8 @@
 - ListaNotas/
 - ├── manage.py
 - ├── templates/
-- │   ├── index.html
-- │   └── lista.html
+- │   ├── inicio.html
+- │   └── notas.html
 - └── README.md
 
 
