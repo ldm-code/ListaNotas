@@ -28,7 +28,7 @@ def site():
               novo=Alunos(nome=nome,nota=nota)
               db.session.add(novo)
               db.session.commit()
-              alunos=Alunos.query.all()
+              alunos=Alunos.query.order_by(Alunos.nota.desc()).all()
               return render_template('notas.html',alunos=alunos)
        else:
               return 'nota ou nome nao inseridos',400
