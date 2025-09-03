@@ -1,7 +1,8 @@
-## ListaNotas
+# ListaNotas
 
 - Uma aplicação desenvolvida para praticar o uso do SQLAlchemy em aplicacoes com o Flask, visando a interação com bancos de dados relacionais (MySql),e a exibição de notas de alunos.
 ---
+
 ## Tecnologias Utilizadas:
 
 - Python
@@ -13,11 +14,9 @@
 ## Funcionalidades:
 
 - Cadastro de alunos com suas respectivas notas.
-
+- rankeamento de alunos por nota.
 - Listagem de alunos e suas notas.
-
 - Integração com banco de dados MySQL utilizando SQLAlchemy.
-
 - Interface simples construída com HTML e Flask.
 ---
 ## Aviso de Segurança:
@@ -39,6 +38,11 @@
 
 - templates/: Diretório contendo os arquivos HTML para renderização das páginas.
 
-- index.html: Página inicial para cadastro de alunos e notas.
+- inicio.html: Página inicial para cadastro de alunos e notas.
 
-- lista.html: Página para exibição da lista de alunos e suas notas.
+- notas.html: Exibe a lista de notas dos alunos
+
+- README.md: Explica o projeto
+
+
+- notas.html: Página para exibição da lista de alunos e suas notas.
