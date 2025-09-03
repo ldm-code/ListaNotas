@@ -40,4 +40,9 @@
 
 - inicio.html: Página inicial para cadastro de alunos e notas.
 
+- notas.html: Exibe a lista de notas dos alunos
+
+- README.md: Explica o projeto
+
+
 - notas.html: Página para exibição da lista de alunos e suas notas.
