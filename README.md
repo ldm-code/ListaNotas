@@ -30,11 +30,15 @@
 - ├── dados/
 - │     └── banco_alunos.sql
 - ├── manage.py
+- ├── static/
+- │    └── css/
+- │      ├── inicio.html
+- │      └── notas.html
 - ├── templates/
 - │   ├── inicio.html
 - │   └── notas.html
 - └── README.md
-
+-static/css/:pasta que contem arquivos css para estilizacao de notas,html e inicio.html
 
 - manage.py: Script principal para execução da aplicação.
 
