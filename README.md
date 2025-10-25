@@ -9,7 +9,8 @@
 - Flask
 - SQLAlchemy
 - HTML
-- MySQL:
+- MySQL
+- CSS
 ---
 ## Funcionalidades:
 
@@ -18,6 +19,8 @@
 - Listagem de alunos e suas notas.
 - Integração com banco de dados MySQL utilizando SQLAlchemy.
 - Interface simples construída com HTML e Flask.
+- Customizacao basica com css.
+- Apagar a nota de um aluno .
 ---
 ## Aviso de Segurança e Observacoes:
 
