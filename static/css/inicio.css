@@ -1,0 +1,31 @@
+label{
+            width: 300px;
+            height: 100px;
+            background-color: rgb(100, 112, 112);
+            border-radius: 3ch;
+            font-size: 30px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            border-color: aqua;
+}
+input{
+          width: 100px;
+          height: 10px;
+          height:max-content;
+          background-color: rgb(187, 109, 82);
+          ;
+          font-size: 16px; 
+          font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+body{
+          background-color: darksalmon;
+          border: 30px solid rgb(150, 150, 163);
+          padding: 200px;
+}
+input:hover{
+          transform: translateX(-9px);
+}
+button:hover{
+          color: rgb(129, 127, 131);
+          transform: translateY(9px);
+
+}

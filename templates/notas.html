@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
           <meta charset="UTF-8">
+         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/notas.css') }}">
 
           <title>lista alunos</title>
 </head>
@@ -9,13 +10,23 @@
           <div style="text-align: center;">
                  <form action="/lista" method="GET"></form>
                     <h1>Seus Alunos:</h1>
-                    <ul>
+                    
+                    <div class="container">
+                    
+                    {% for aluno in alunos %}
+                    <div class="p-card">
 
-                              {% for aluno in alunos %}
-                                  <li>NOME DO ALUNO: {{ aluno.nome }}, NOTA DO ALUNO: {{ aluno.nota }}</li>
-                              {% endfor %}
+                        <p>NOME DO ALUNO: {{ aluno.nome }}</p>
+                        <p> NOTA DO ALUNO: {{ aluno.nota }}</p>
+                        <form action="{{ url_for('delete', id=aluno.id) }}" method="POST">
+                            <input type="submit" value="apagar">
+                        </form>
+                    </div>
+                    
+                    {% endfor %}
+                </div>
                                    <a href="/">voltar</a><br>
-                    </ul>
+                    
                     
 
 

@@ -1,5 +1,6 @@
 from flask import Flask,render_template,request
 from flask_sqlalchemy import SQLAlchemy
+import re
 
 app=Flask(__name__)
 
@@ -21,20 +22,30 @@ def start():
 def site():
        nome=request.form.get('nome')
        nota=request.form.get('nota')
+      
        try:
                 nota=int(nota)
        except:
                     return 'nota tem que ser um numero!',400
+       if nota>10 :
+               return 'nota maxima e 10',400
+       if nota <0:
+               return 'nota minima e 0',400
        if nome and nota <=10:
               novo=Alunos(nome=nome,nota=nota)
               db.session.add(novo)
               db.session.commit()
               alunos = Alunos.query.order_by(Alunos.nota.desc()).all()
               return render_template('notas.html',alunos=alunos)
-       if nota>10:
-               return 'nota maxima e 10',400
        else:
               return 'nota ou nome nao inseridos',400
-
+@app.route('/delete/<int:id>',methods=['POST'])
+def delete(id):
+        aluno=Alunos.query.get(id)
+        if aluno:
+                db.session.delete(aluno)
+                db.session.commit()
+        alunos = Alunos.query.order_by(Alunos.nota.desc()).all()
+        return render_template('notas.html',alunos=alunos)
 if __name__=='__main__':
        app.run(debug=True)
