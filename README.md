@@ -22,8 +22,7 @@
 ## Aviso de Segurança e Observacoes:
 
 - Por questões de segurança, a senha do banco de dados presente neste repositório não é a minha senha real. Ela foi configurada de forma genérica para fins de demonstração e aprendizado.  ao utilizar este projeto, você altera a senha(a variavel 'SUA_SENHA_DO_BANCO') pelo valor correspondente ao seu ambiente de desenvolvimento, garantindo a segurança de suas credenciais.
-- Alem disso,e necessario que voce tenha um banco com o nome alunos e que tenha criado uma conexao ao banco em sua IDE.
-- E necessario apenas o banco pois as tabelas ja estao configuradas em banco_alunos.sql
+- Ao executar a aplicacao,antes execute o arquivo banco_aluno.sql,ele permite a criacao do banco e tabelas necessarias,necessiatndo apenas que voce configure a conexao.
 ---
 ## Estrutura do Projeto:
 
