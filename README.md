@@ -32,17 +32,17 @@
 
 - ListaNotas/
 - ├── dados/
-- │     └── banco_alunos.sql
+- │       └── banco_alunos.sql
 - ├── manage.py
 - ├── static/
-- |    └── js/
-- │      └──  notas.js
-- │    └── css/
-- │      ├── inicio.html
-- │      └── notas.html
+- │         └── js/
+- │               └──  notas.js
+- │  └── css/
+- │         ├── inicio.css
+- │         └── notas.css
 - ├── templates/
-- │   ├── inicio.html
-- │   └── notas.html
+- │            ├── inicio.html
+- │            └── notas.html
 - └── README.md
 -static/css/:pasta que contem arquivos css para estilizacao de notas,html e inicio.html.
 
