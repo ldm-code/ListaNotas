@@ -35,11 +35,11 @@
 - │       └── banco_alunos.sql
 - ├── manage.py
 - ├── static/
-- │         └── js/
-- │               └──  notas.js
-- │  └── css/
-- │         ├── inicio.css
-- │         └── notas.css
+- │          ├──js/
+- │          │      └──  notas.js
+- │          └── css/
+- │          │     ├── inicio.css
+- │          │     └── notas.css
 - ├── templates/
 - │            ├── inicio.html
 - │            └── notas.html
