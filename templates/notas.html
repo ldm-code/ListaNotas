@@ -16,8 +16,21 @@
                     {% for aluno in alunos %}
                     <div class="p-card">
 
-                        <p>NOME DO ALUNO: {{ aluno.nome }}</p>
-                        <p> NOTA DO ALUNO: {{ aluno.nota }}</p>
+                        <p>NOME DO ALUNO: 
+                            <span id="nome-{{ aluno.id }}">{{ aluno.nome }}</span>
+                            <input type="text" name="nome" id="input-nome-{{ aluno.id }}"  style="display:none;">
+    
+                        </p>
+                        <p> NOTA DO ALUNO:
+                            <span id="nota-{{ aluno.id }}">{{ aluno.nota }}</span>
+                             <input type="number" name="nota" id="input-nota-{{ aluno.id }}"  style="display:none;">
+                        </p>
+                        <button type="button" class="toggle-editar" data-id="{{ aluno.id }}">Editar</button>
+                        <form id="form-edit-{{ aluno.id }}" action="{{ url_for('edit', id=aluno.id) }}" method="POST" style="display:inline;">
+                             <input type="hidden" name="nome" id="hidden-nome-{{ aluno.id }}">
+                             <input type="hidden" name="nota" id="hidden-nota-{{ aluno.id }}">
+                               <input type="submit" value="Salvar" style="display:none;">
+                      </form>
                         <form action="{{ url_for('delete', id=aluno.id) }}" method="POST">
                             <input type="submit" value="apagar">
                         </form>
@@ -30,6 +43,7 @@
                     
 
 
-          </div>          
+          </div>   
+            <script src="{{ url_for('static', filename='js/notas.js') }}"></script>       
 </body>
 </html>

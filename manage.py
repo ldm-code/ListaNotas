@@ -4,7 +4,7 @@ import re
 
 app=Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = "mysql://root:SUA_SENHA_DO_BANCO@127.0.0.1/alunos"
+app.config['SQLALCHEMY_DATABASE_URI'] = "mysql://root:sua_senha_do_banco@127.0.0.1/alunos"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db=SQLAlchemy(app)
 class Alunos(db.Model):
@@ -37,8 +37,7 @@ def site():
               db.session.commit()
               alunos = Alunos.query.order_by(Alunos.nota.desc()).all()
               return render_template('notas.html',alunos=alunos)
-       else:
-              return 'nota ou nome nao inseridos',400
+
 @app.route('/delete/<int:id>',methods=['POST'])
 def delete(id):
         aluno=Alunos.query.get(id)
@@ -47,5 +46,15 @@ def delete(id):
                 db.session.commit()
         alunos = Alunos.query.order_by(Alunos.nota.desc()).all()
         return render_template('notas.html',alunos=alunos)
+@app.route('/edit/<int:id>',methods=['POST'])
+def edit(id):
+        aluno=Alunos.query.get(id)
+        if aluno:
+                aluno.nome=request.form.get('nome')
+                aluno.nota=request.form.get('nota')
+                db.session.commit()
+        alunos=Alunos.query.order_by(Alunos.nota.desc()).all()
+        return render_template('notas.html',alunos=alunos)
+
 if __name__=='__main__':
        app.run(debug=True)
