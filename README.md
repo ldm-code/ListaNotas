@@ -36,7 +36,7 @@
 - ├── manage.py
 - ├── static/
 - |    └── js/
-- │       └──  notas.js
+- │      └──  notas.js
 - │    └── css/
 - │      ├── inicio.html
 - │      └── notas.html
