@@ -4,7 +4,7 @@ import re
 
 app=Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = "mysql://root:root@127.0.0.1/alunos"
+app.config['SQLALCHEMY_DATABASE_URI'] = "mysql://root:SUA_SENHA_DO_BANCO@127.0.0.1/alunos"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db=SQLAlchemy(app)
 class Alunos(db.Model):
