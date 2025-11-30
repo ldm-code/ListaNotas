@@ -1,10 +1,10 @@
-from flask import Flask,render_template,request
+from flask import Flask,render_template,request,redirect,url_for
 from flask_sqlalchemy import SQLAlchemy
 import re
 
 app=Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = "mysql://root:sua_senha_do_banco@127.0.0.1/alunos"
+app.config['SQLALCHEMY_DATABASE_URI'] = "mysql://root:root@127.0.0.1/alunos"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db=SQLAlchemy(app)
 class Alunos(db.Model):
@@ -17,6 +17,7 @@ with app.app_context():
     db.create_all()
 @app.route('/')
 def start():
+       
        return render_template('inicio.html')
 @app.route('/add' ,methods=['POST'])
 def site():
@@ -36,16 +37,20 @@ def site():
               db.session.add(novo)
               db.session.commit()
               alunos = Alunos.query.order_by(Alunos.nota.desc()).all()
-              return render_template('notas.html',alunos=alunos)
-
+              
+       return render_template('notas.html',alunos=alunos)
+@app.route('/lista')
+def lista():
+    alunos = Alunos.query.order_by(Alunos.nota.desc()).all()
+    return render_template('notas.html', alunos=alunos)
 @app.route('/delete/<int:id>',methods=['POST'])
 def delete(id):
         aluno=Alunos.query.get(id)
         if aluno:
                 db.session.delete(aluno)
                 db.session.commit()
-        alunos = Alunos.query.order_by(Alunos.nota.desc()).all()
-        return render_template('notas.html',alunos=alunos)
+
+        return redirect(url_for('lista'))
 @app.route('/edit/<int:id>',methods=['POST'])
 def edit(id):
         aluno=Alunos.query.get(id)
@@ -53,8 +58,7 @@ def edit(id):
                 aluno.nome=request.form.get('nome')
                 aluno.nota=request.form.get('nota')
                 db.session.commit()
-        alunos=Alunos.query.order_by(Alunos.nota.desc()).all()
-        return render_template('notas.html',alunos=alunos)
+        return redirect(url_for('lista'))
 
 if __name__=='__main__':
        app.run(debug=True)
