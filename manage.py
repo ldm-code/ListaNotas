@@ -36,9 +36,9 @@ def site():
               novo=Alunos(nome=nome,nota=nota)
               db.session.add(novo)
               db.session.commit()
-              alunos = Alunos.query.order_by(Alunos.nota.desc()).all()
               
-       return render_template('notas.html',alunos=alunos)
+              
+       return redirect(url_for('lista'))
 @app.route('/lista')
 def lista():
     alunos = Alunos.query.order_by(Alunos.nota.desc()).all()
