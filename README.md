@@ -11,6 +11,7 @@
 - HTML
 - MySQL
 - CSS
+- JavaScript
 ---
 ## Funcionalidades:
 
@@ -31,17 +32,21 @@
 
 - ListaNotas/
 - ├── dados/
-- │     └── banco_alunos.sql
+- │       └── banco_alunos.sql
 - ├── manage.py
 - ├── static/
-- │    └── css/
-- │      ├── inicio.html
-- │      └── notas.html
+- │          ├──js/
+- │          │      └──  notas.js
+- │          └── css/
+- │          │     ├── inicio.css
+- │          │     └── notas.css
 - ├── templates/
-- │   ├── inicio.html
-- │   └── notas.html
+- │            ├── inicio.html
+- │            └── notas.html
 - └── README.md
--static/css/:pasta que contem arquivos css para estilizacao de notas,html e inicio.html
+-static/css/:pasta que contem arquivos css para estilizacao de notas,html e inicio.html.
+
+-static/js/:permite que o usuario edite os dados dentro da interface notas.html de forma simples e direta.
 
 - manage.py: Script principal para execução da aplicação.
 
